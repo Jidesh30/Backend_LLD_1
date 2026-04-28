@@ -26,7 +26,13 @@ public class Main {
 
         account1.withdraw(150);
         account1.showBal();
+        account1.printTransaction();
         System.out.println("Bankaccount details:");
+//
+//        Student student3 = new Student();
+//        Student student4 = new Student("John", 26, "May 2026");
+//
+//        System.out.println("Student default details:");
 
     }
 }
