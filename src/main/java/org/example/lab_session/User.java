@@ -49,15 +49,19 @@ public abstract class User {
         this.contactInfo = contactInfo;
     }
 
-    public final String generateUniqueId(){
+    protected final String generateUniqueId(){
         TOTAL_USERS++;
         return "U-" + ID_SEQUENCE++;
     }
 
     public abstract void displayDashboard();
     public abstract boolean canBorrowBooks();
+    public abstract void incrementBorrowedBooks();
 
     public static int getTotalUsers(){
         return TOTAL_USERS;
     }
+
+    public abstract void decrementBorrowedBooks();
+
 }

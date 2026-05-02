@@ -40,4 +40,21 @@ public class Member extends User{
          return borrowedBooksCount < MAX_BORROW_LIMIT;
     }
 
+    public void incrementBorrowedBooks(){
+        if(canBorrowBooks()){
+            borrowedBooksCount++;
+        } else {
+            System.out.println("Borrowing limit reached. Cannot borrow more books.");
+        }
+    }
+
+    @Override
+    public void decrementBorrowedBooks(){
+        if(borrowedBooksCount > 0){
+            borrowedBooksCount--;
+        } else {
+            System.out.println("No borrowed books to return.");
+        }
+    }
+
 }

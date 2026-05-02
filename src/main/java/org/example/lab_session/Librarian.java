@@ -29,14 +29,24 @@ public class Librarian extends User{
     @Override
     public void displayDashboard() {
         System.out.println("Librarian Dashboard");
-        System.out.println("Name: " + getName(null));
-        System.out.println("Contact Info: " + getContactInfo(null));
+        System.out.println("Name: " + getName());
+        System.out.println("Contact Info: " + getContactInfo());
         System.out.println("Employee Number: " + employeeNumber);
     }
 
     @Override
     public boolean canBorrowBooks(){
         return true;
+    }
+
+    @Override
+    public void incrementBorrowedBooks() {
+        //NO OP
+    }
+
+    @Override
+    public void decrementBorrowedBooks() {
+        //NO OP
     }
 
     public void addNewBook(Book book){
