@@ -37,4 +37,16 @@ public class LibraryManagementSystem {
         return results;
     }
 
+    public void displayAllBooks(){
+        for(Book b: bookInventory){
+            b.displayBookDetails();
+        }
+    }
+
+    public void displayRegisteredUsers(){
+        for(User u: registeredUsers){
+            System.out.println("User ID " + u.getUserId() + "User: " + u.getName() + "Contact " + u.getContactInfo());
+        }
+    }
+
 }

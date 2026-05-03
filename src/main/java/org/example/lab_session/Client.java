@@ -1,6 +1,6 @@
 package org.example.lab_session;
 
-public class Test {
+public class Client {
     public static void main(String[] args) {
         LibraryManagementSystem lms = new LibraryManagementSystem();
 
