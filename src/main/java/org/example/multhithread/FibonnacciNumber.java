@@ -23,7 +23,7 @@ public class FibonnacciNumber implements Callable<Integer> {
     public Integer call() throws Exception {
         if(n<=1) return n;
 
-        ExecutorService executorService = Executors.newCachedThreadPool();
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
 
         Future<Integer> first = executorService.submit(new FibonnacciNumber(n-1));
         Future<Integer> second = executorService.submit(new FibonnacciNumber(n-2));

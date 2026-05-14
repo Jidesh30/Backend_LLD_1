@@ -1,17 +1,24 @@
 package org.example.multhithread;
 
-public class NumberPrinter implements Runnable{
+import java.util.concurrent.Callable;
+
+public class NumberPrinter implements Callable<Integer> {
     private int number;
 
     public NumberPrinter(int number){
         this.number = number;
     }
 
-    @Override
-    public void run() {
-        System.out.println("Number: "
-                + number
-                + " printed by "
-                + Thread.currentThread().getName());
+//    @Override
+//    public void run() {
+//        System.out.println("Number: "
+//                + number
+//                + " printed by "
+//                + Thread.currentThread().getName());
+//    }
+
+    public Integer call() throws Exception{
+        return number*5;
     }
+
 }
