@@ -1,4 +1,4 @@
-package org.example.multhithread.mergesort;
+package org.example.multithread.mergesort;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

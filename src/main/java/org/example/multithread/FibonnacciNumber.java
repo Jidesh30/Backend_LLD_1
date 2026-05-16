@@ -1,4 +1,4 @@
-package org.example.multhithread;
+package org.example.multithread;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

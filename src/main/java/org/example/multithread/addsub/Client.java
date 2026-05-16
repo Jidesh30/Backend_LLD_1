@@ -1,4 +1,4 @@
-package org.example.multhithread.addsub;
+package org.example.multithread.addsub;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;

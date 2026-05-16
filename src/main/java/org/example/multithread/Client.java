@@ -1,4 +1,4 @@
-package org.example.multhithread;
+package org.example.multithread;
 
 /*
 Print numbers from 1 to 100 each in a separate thread.

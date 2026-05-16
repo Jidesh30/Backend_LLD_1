@@ -1,13 +1,13 @@
-package org.example.multhithread.producerconsumer;
+package org.example.multithread.producerconsumer;
 
 import java.util.concurrent.Semaphore;
 
-public class Producer implements Runnable{
+public class Consumer implements Runnable{
     private Store store;
     private Semaphore producerSemaphore;
     private Semaphore consumerSemaphore;
 
-    public Producer(Store store, Semaphore producerSemaphore, Semaphore consumerSemaphore){
+    public Consumer(Store store, Semaphore producerSemaphore, Semaphore consumerSemaphore){
         this.store = store;
         this.producerSemaphore = producerSemaphore;
         this.consumerSemaphore = consumerSemaphore;
@@ -17,11 +17,11 @@ public class Producer implements Runnable{
     public void run(){
         while(true){
             try {
-                producerSemaphore.acquire();
-                if(store.getItems().size() < store.getMaxSize()){
-                    store.addItems(new Object());
+                consumerSemaphore.acquire();
+                if(store.getItems().size() > 0){
+                    store.removeItems();
                 }
-                consumerSemaphore.release();
+                producerSemaphore.release();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

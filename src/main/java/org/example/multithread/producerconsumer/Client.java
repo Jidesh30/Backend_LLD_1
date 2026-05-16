@@ -1,4 +1,4 @@
-package org.example.multhithread.producerconsumer;
+package org.example.multithread.producerconsumer;
 
 import java.util.concurrent.Semaphore;
 
