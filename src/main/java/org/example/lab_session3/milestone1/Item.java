@@ -1,4 +1,4 @@
-package org.example.lab_session3;
+package org.example.lab_session3.milestone1;
 
 public class Item implements Comparable<Item> {
     private String id;
