@@ -1,6 +1,6 @@
 package org.example.lab_session3.milestone1;
 
-public class Order implements Comparable<Order> {
+public class  Order implements Comparable<Order> {
     private String orderId;
     private boolean isExpress;
 

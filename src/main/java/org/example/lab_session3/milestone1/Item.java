@@ -1,6 +1,6 @@
 package org.example.lab_session3.milestone1;
 
-public class Item implements Comparable<Item> {
+public class    Item implements Comparable<Item> {
     private String id;
     private String name;
     private double price;
